@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* top: 0; */
+  height: 78px;
+  width: 100%;
+  background: linear-gradient(180deg, #000812 -10.67%, #011123 421.33%);
+  align-items: center;
+  img {
+    height: 40px;
+    margin-top: 16px;
+  }
+  .divider {
+    height: 1px;
+    background: radial-gradient(
+      43.12% 14292299.82% at 49.84% 71.56%,
+      #002959 0%,
+      rgba(0, 56, 124, 0) 75%
+    );
+    width: 80%;
+    margin-bottom: 1px;
+  }
+}
