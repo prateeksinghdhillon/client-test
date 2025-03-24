@@ -56,7 +56,10 @@ function Hero() {
           {textDisplayItems.map((item, index) => (
             <div
               key={item.id}
-              style={{ margin: "50px auto", width: "100%", maxWidth: "1280px" }}
+              style={{
+                margin: "50px auto",
+                width: `${windowWidth > 430 ? "90%" : "100%"}`,
+              }}
             >
               <TextDisplay
                 title={item.title}
@@ -66,8 +69,10 @@ function Hero() {
                 height={
                   windowWidth < 430
                     ? "auto"
-                    : windowWidth < 768
-                    ? "500px"
+                    : windowWidth < 1200
+                    ? windowWidth > 768
+                      ? "500px"
+                      : "475px"
                     : "641px"
                 }
                 width="100%"
@@ -109,7 +114,7 @@ const TextDisplay: React.FC<TextDisplayProps> = ({
     >
       <div className="text-display-inner">
         <div className="content-wrapper">
-        {imageUrl && windowWidth <= 430 && (
+          {imageUrl && windowWidth <= 430 && (
             <div className="image-container">
               <div
                 className="grid-background"
